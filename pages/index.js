@@ -1,9 +1,9 @@
-import PriceList from "../components/priceList"
+import Pricing_One from "../components/Pricing_One"
 
 export default function Home() {
   return (
     <>
-      <PriceList />
+      <Pricing_One />
     </>
   )
 }

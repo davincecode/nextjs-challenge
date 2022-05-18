@@ -16,12 +16,10 @@ const [subscription, setSubscription] = useState(true);
           </div>
           
           <div className='item-center w-auto justify-center flex'>
-          <button className={subscription ? "px-4 py-1 font-semibold border-2 rounded-l-lg dark:bg-[#2563eb] dark:border-[#2563eb] dark:text-[#fff] transition ease-linear " : "px-4 py-1 border rounded-l-lg dark:border-[#2563eb] hover:bg-[#2563eb] hover:text-[#fff] transition ease-linear "} onClick={() => setSubscription(true)}>Monthly</button>
-          <button className={subscription ? "px-4 py-1 border rounded-r-lg dark:border-[#2563eb] hover:bg-[#2563eb] hover:text-[#fff] transition ease-linear" : "px-4 py-1 font-semibold border-2 rounded-r-lg dark:bg-[#2563eb] dark:border-[#2563eb] dark:text-[#fff] transition ease-linear" } onClick={() => setSubscription(false)}>Annually</button>
-				
+          <button className={subscription ? "px-4 py-1 font-semibold border-2 rounded-l-lg dark:bg-[#2563eb] dark:border-[#2563eb] dark:text-[#fff] transition ease-linear " : "px-4 py-1 border-2 rounded-l-lg dark:border-[#2563eb] hover:bg-[#2563eb] hover:text-[#fff] transition ease-linear "} onClick={() => setSubscription(true)}>Monthly</button>
+          <button className={subscription ? "px-4 py-1 border-2 rounded-r-lg dark:border-[#2563eb] hover:bg-[#2563eb] hover:text-[#fff] transition ease-linear" : "px-4 py-1 font-semibold border-2 rounded-r-lg dark:bg-[#2563eb] dark:border-[#2563eb] dark:text-[#fff] transition ease-linear" } onClick={() => setSubscription(false)}>Annually</button>
           </div>
 
-    
           <section className="flex flex-col lg:flex-row items-center lg:justify-center w-full lg:px-10 py-12">
       
             <article className="hover:shadow-2xl hover:bg-[#f7f8f9] cursor-pointer duration-300 w-4/5 lg:w-custom mb-10 lg:px-8 py-14 text-center text-primary-dark bg-primary-white border rounded-2xl lg:rounded-r-none lg:rounded-l-2xl shadow-md min-h-[520px] flex-1">

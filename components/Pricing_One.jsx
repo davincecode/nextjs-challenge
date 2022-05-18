@@ -15,9 +15,10 @@ const [subscription, setSubscription] = useState(true);
             </p>
           </div>
           
-          <div className='item-center w-auto justify-center flex mb-12'>
-          <button className="px-4 py-1 font-semibold border-2 rounded-l-lg dark:bg-[#2563eb] dark:border-[#2563eb] dark:text-[#fff]" onClick={() => setSubscription(true)}>Monthly billing</button>
-				  <button className="px-4 py-1 border rounded-r-lg dark:border-[#2563eb] hover:bg-[#2563eb] hover:text-[#fff] active:bg-[#2563eb] focus:outline-none" onClick={() => setSubscription(false)}>Yearly billing</button>
+          <div className='item-center w-auto justify-center flex'>
+          <button className={subscription ? "px-4 py-1 font-semibold border-2 rounded-l-lg dark:bg-[#2563eb] dark:border-[#2563eb] dark:text-[#fff] transition ease-linear " : "px-4 py-1 border rounded-l-lg dark:border-[#2563eb] hover:bg-[#2563eb] hover:text-[#fff] transition ease-linear "} onClick={() => setSubscription(true)}>Monthly</button>
+          <button className={subscription ? "px-4 py-1 border rounded-r-lg dark:border-[#2563eb] hover:bg-[#2563eb] hover:text-[#fff] transition ease-linear" : "px-4 py-1 font-semibold border-2 rounded-r-lg dark:bg-[#2563eb] dark:border-[#2563eb] dark:text-[#fff] transition ease-linear" } onClick={() => setSubscription(false)}>Annually</button>
+				
           </div>
 
     
@@ -26,7 +27,7 @@ const [subscription, setSubscription] = useState(true);
             <article className="hover:shadow-2xl hover:bg-[#f7f8f9] cursor-pointer duration-300 w-4/5 lg:w-custom mb-10 lg:px-8 py-14 text-center text-primary-dark bg-primary-white border rounded-2xl lg:rounded-r-none lg:rounded-l-2xl shadow-md min-h-[520px] flex-1">
               <h5 className="font-bold text-base">Starter</h5>
               <h2 className="pb-4 flex justify-center flex-col font-bold ">
-                <span className="text-6xl">FREE</span>
+                <span className="text-6xl py-4">FREE</span>
                 <span className="text-lg font-normal flex-wrap px-4">Get started with Renotag, absolutely free!</span>
               </h2>
               <ul className="text-sm font-bold">
@@ -42,8 +43,8 @@ const [subscription, setSubscription] = useState(true);
       <article className="hover:shadow-2xl cursor-pointer duration-300 lg:w-custom w-4/5 mb-10 py-16 lg:px-12 text-center text-white bg-[#2d68eb] rounded-3xl drop-shadow-2xl z-10 min-h-[600px] flex-1" >
             <h5 className="font-bold text-base ">Pro</h5>
             <small className='absolute top-0 bg-[#f97315] px-8 py-1 rounded-full -translate-y-1/2'>Most Popular</small>
-            <div className="flex-col font-bold pb-4 mt-2  flex justify-center">
-              <div className='flex flex-row justify-center items-end'>
+            <div className="flex-col font-bold pb-4 mt-2 flex justify-center">
+              <div className='flex flex-row justify-center items-end py-4'>
                 <span className="text-6xl ">${ subscription ? 99 : 79 }</span>
                 <small>/Month</small>
               </div>
@@ -62,8 +63,11 @@ const [subscription, setSubscription] = useState(true);
           
       <article className="hover:shadow-2xl hover:bg-[#f7f8f9] cursor-pointer duration-300 bg-white w-4/5 lg:w-custom mb-10 lg:px-4 py-10 text-center text-primary-dark rounded-2xl lg:rounded-l-none lg:rounded-r-2xl border shadow-md min-h-[520px] flex-1">
         <h5 className="font-bold text-base">Enterprise</h5>
-        <h2 className="flex flex-col justify-center pb-4 font-bold ">
-              <span className="text-6xl">${ subscription ? 129 : 105 }</span>
+            <h2 className="flex flex-col justify-center pb-4 font-bold ">
+            <div className='flex flex-row justify-center items-end py-4'>
+                <span className="text-6xl">${ subscription ? 129 : 105 }</span>
+                <small>/Month</small>
+              </div>
               <span className="text-lg font-normal flex-wrap px-4">Unlimited estimates and dedicated support for your company.</span>
         </h2>
         <ul className="text-sm font-bold">
